@@ -3,7 +3,7 @@ using namespace std;
 
 void calculate(int n, double r, double c, double m)
 {
-	long total = n*r+c+m;
+	double total = n*r+c+m;
 	cout<<"Your total amount is = Rs."<<total<<endl;
 }
 void calculate(double c, double m)

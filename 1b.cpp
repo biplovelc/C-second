@@ -3,12 +3,11 @@ using namespace std;
 
 double compute(double a, long b, int c=47)
 {
-	double sum;
-	sum = a+b+c;
+	double sum = a+b+c;
 	return sum;
 }
 int main()
 {
-	cout<<"Sum = "<<compute(34567.783, 364782)<<endl;
-	cout<<"Sum = "<<compute(34532.324, 28794, 982);
+	cout<<"Sum = "<<compute(345671.783, 364782)<<endl;
+	cout<<"Sum = "<<compute(34532.324, 287934, 982);
 }

@@ -4,9 +4,9 @@ using namespace std;
 class Circle
 {
 	private:
-		int radius;
+		double radius;
 	public:
-		void setRadius(int r)
+		void setRadius(double r)
 		{
 			radius = r;
 		}
@@ -26,7 +26,7 @@ class Pizza
 		{
 			price = p;	
 		}	
-		void setSize(int r)
+		void setSize(double r)
 		{
 			size.setRadius(r);
 		}
@@ -40,7 +40,7 @@ int main()
 {
 	Pizza myPizza;
 	myPizza.setPrice(890.67);
-	myPizza.setSize(8.5);
+	myPizza.setSize(7.5);
 	double cost = myPizza.costPerSqIn();
 	cout<<"Cost per square inch of Pizza = "<<cost<<endl;
 }
