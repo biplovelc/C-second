@@ -16,7 +16,7 @@ class Circle
 			return area;
 		}
 };
-class myPizza
+class Pizza
 {
 	private: 
 		double price;
@@ -36,27 +36,12 @@ class myPizza
 		}
 };
 
-void Pizza(myPizza *P, double p)
-{
-	P->setPrice(p);
-}
-
-void Pizza(myPizza *P, int s)
-{
-	P->setSize(s);
-}
-
-double Pizza(myPizza P)
-{
-	P.costPerSqIn();
-}
-
 int main()
 {
-	myPizza P;
-	Pizza(&P, 1000.9089);
-	Pizza(&P, 9);
-	double money = Pizza(P);
-	cout<<"Cost of 1 sqinch of pizza = "<<money;
+	Pizza myPizza;
+	myPizza.setPrice(890.67);
+	myPizza.setSize(8.5);
+	double cost = myPizza.costPerSqIn();
+	cout<<"Cost per square inch of Pizza = "<<cost<<endl;
 }
 

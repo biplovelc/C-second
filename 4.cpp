@@ -24,7 +24,7 @@ class Rectangle
 		}
 };
 
-class Purchase
+class Carpet
 {
 	private:
 		double pricepersqft;
@@ -48,35 +48,18 @@ class Purchase
 		}
 };
 
-void Carpet(Purchase *P, double x)
-{
-	P->setPricepersqft(x);
-}
-
-void Carpet(Purchase *P, double l, double b)
-{
-	P->setDimenstions(l, b);
-}
-
-double Carpet(Purchase P)
-{
-	return(P.getTotalprice());
-}
-
 int main()
 {
-	Purchase P;
-	double x;
-	cout<<"Enter the price per sqft of carpet: ";
-	cin>>x;
-	Carpet(&P, x);
+	Carpet purchase;
+	double a;
+	cout<<"Enter the price per square feet: ";
+	cin>>a;
+	purchase.setPricepersqft(a);
 	
-	double l, b;
-	cout<<"Enter length and width:\n";
-	cin>>l>>b;	
-	Carpet(&P, l, b);
-	
-	double totalprice = Carpet(P);
-	cout<<"Total price of the carpet is = "<<totalprice;
+	int x, y;
+	cout<<"Enter length and breadth of carpet:\n";
+	cin>>x>>y;
+	purchase.setDimenstions(x, y);
+	double total = purchase.getTotalprice();
+	cout<<"Total price of carpet = "<<total;
 }
-

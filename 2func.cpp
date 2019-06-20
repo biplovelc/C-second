@@ -1,22 +1,21 @@
 #include<iostream>
 using namespace std;
 
-void calculate(int n, int r, int c, int m)
+void calculate(int n, double r, double c, double m)
 {
-	long total;
-	total = n*r+c+m;
+	long total = n*r+c+m;
 	cout<<"Your total amount is = Rs."<<total<<endl;
 }
-void calculate(int c, int m)
+void calculate(double c, double m)
 {
-	long total;
-	total = c+m;
+	double total = c+m;
 	cout<<"Your total amount is = Rs. "<<total<<endl;
 }
 int main()
 {
 	char ch;
-	int num, rate, charges, med;
+	int num;
+	double rate, charges, med;
 	cout<<"Enter if the patient was admitted as in-patient(y)or out(n): ";
 	cin>>ch;
 	cout<<endl;
@@ -32,13 +31,16 @@ int main()
 		cin>>med;
 		calculate(num, rate, charges, med);
 	}
-	else
+	else if(ch == 'n')
 	{
-		cout<<"Enter charges for hospital serrvices: ";
+		cout<<"Enter charges for hospital services: ";
 		cin>>charges;
-		cout<<"Enter hospital medicatin charges: ";
+		cout<<"Enter hospital medication charges: ";
 		cin>>med;
 		calculate(charges, med);
 	}
+	else{
+		cout<<"Please, enter either y or n !!!";
+		}
 	
 }
